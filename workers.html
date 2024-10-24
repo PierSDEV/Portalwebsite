@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Výběr Pracovníků - Webový Portál</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hlavní panel -->
+    <div class="navbar">
+        <div>
+            <a href="index.html">Domů</a>
+            <a href="workers.html">Výběr Pracovníků</a>
+            <a href="references.html">Reference</a>
+            <a href="contacts.html">Kontakty</a>
+            <a href="gallery.html">Fotogalerie</a>
+        </div>
+        <div>
+            <a href="chat.html">Online Chat</a>
+        </div>
+    </div>
+
+    <!-- Sekce pracovníků -->
+    <div class="container">
+        <h1>Výběr Pracovníků</h1>
+        <section id="worker-filter" class="filter-section">
+            <h2>Filtrovat Pracovníky Podle Specializace</h2>
+            <label for="specialization">Vyberte specializaci:</label>
+            <select id="specialization" onchange="filterWorkers()">
+                <option value="all">Všechny</option>
+                <option value="svářeč">Svářeč</option>
+                <option value="montér">Montér</option>
+                <option value="instalatér">Instalatér</option>
+                <option value="elektrikář">Elektrikář</option>
+            </select>
+        </section>
+
+        <section class="worker-section">
+            <div class="worker-list">
+                <div class="worker-card">
+                    <img src="https://via.placeholder.com/300x150" alt="Svářeč 1">
+                    <h3>Svářeč 1</h3>
+                    <p>Specializace: TIG, MIG</p>
+                    <button onclick="selectWorker('Svářeč 1')">Vybrat</button>
+                </div>
+                <div class="worker-card">
+                    <img src="https://via.placeholder.com/300x150" alt="Svářeč 2">
+                    <h3>Svářeč 2</h3>
+                    <p>Specializace: Nerez, Ocel</p>
+                    <button onclick="selectWorker('Svářeč 2')">Vybrat</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
